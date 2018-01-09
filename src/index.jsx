@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-import Console from './misc/Console'
+import Utils from './misc/Utils'
 
 import App from './containers/App'
 
@@ -15,7 +15,7 @@ const render = Component => {
 }
 
 if(module.hot) {
-	Console.log('HMR hot enabled')
+	Utils.log('HMR hot enabled')
 	module.hot.accept('./containers/App', () => render(App))
 }
 

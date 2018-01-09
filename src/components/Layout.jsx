@@ -1,5 +1,4 @@
 import injectTapEventPlugin from 'react-tap-event-plugin' // Needed for onTouchTap
-import 'babel-polyfill' // http://redux.js.org/docs/advanced/AsyncActions.html#note-on-fetch
 
 import React from 'react'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'

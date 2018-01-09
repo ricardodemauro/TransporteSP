@@ -1,6 +1,7 @@
 export default class Strings {
     static AppName = 'AppName'
-    static Author = "Author"
+    static Author = 'Author'
+    static MapSearchBoxPlaceHolder = 'MapSearchBoxPlaceHolder'
     static get (name) {
         if(_strings[name]) {
             return _strings[name]
@@ -13,5 +14,6 @@ export default class Strings {
 
 const _strings = {
     AppName: 'Transporte SP',
-    Author: 'Ricardo'
+    Author: 'Ricardo',
+    MapSearchBoxPlaceHolder: 'Search on map'
 }
