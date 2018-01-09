@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 
-import Root from './containers/Root'
+import App from './containers/App'
 
 const render = Component => {
   ReactDOM.render(
@@ -13,8 +13,10 @@ const render = Component => {
   )
 }
 
-render(Root)
+if(module.hot) {
 
-if (module.hot) {
-  module.hot.accept('./containers/Root', () => { render(Root) })
+  console.log('HMR hot enabled')
+  module.hot.accept('./containers/App', () => render(App))
 }
+
+render(App)
