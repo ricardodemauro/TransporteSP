@@ -1,14 +1,17 @@
 export default class Strings {
     static AppName = 'AppName'
+    static Author = "Author"
     static get (name) {
-        switch(name)
-        {
-            case Strings.AppName:
-                return 'Transporte SP'
-            default:
-                return name
+        if(_strings[name]) {
+            return _strings[name]
         }
+        return `[${name}]`
     }
 
     static GoogleApi = ''
+}
+
+const _strings = {
+    AppName: 'Transporte SP',
+    Author: 'Ricardo'
 }

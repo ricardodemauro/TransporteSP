@@ -6,6 +6,8 @@ import facebook from '../images/facebook.png'
 import github from '../images/github-circle.png'
 
 import Strings from '../misc/Strings'
+import Urls from '../misc/Urls'
+import Utils from '../misc/Utils'
 
 const style = {
 	background: {
@@ -33,14 +35,14 @@ const Footer = () => (
 	<div style={style.background}>
 		<div style={style.panel}>
 			<h1 style={{ marginTop: 0 }}>{appName}</h1>
-			<p>&copy; 2017 <a style={style.anchorColor} href="http://joonpark.me">Joon Park</a></p>
+			<p>&copy; {Utils.getYear()} <a style={style.anchorColor} href={Urls.get(Urls.Github)}>{Strings.get(Strings.Author)}</a></p>
 			<p>{appName} is not created by Northwestern University.</p>
 			<Link to="/tos"><p style={style.anchorColor}>Terms of Service and Privacy Policy</p></Link>
 			<Link to="/acknowledgements"><p style={style.anchorColor}>Acknowledgements</p></Link>
 		</div>
 		<div style={style.panel}>
-			<a href="https://twitter.com/RicardoDeMauro/"><img src={facebook} alt="Facebook" style={style.icon} /></a>
-			<a href="https://github.com/ricardodemauro/"><img src={github} alt="Github" style={style.icon} /></a>
+			<a href={Urls.get(Urls.Facebook)}><img src={facebook} alt="Facebook" style={style.icon} /></a>
+			<a href={Urls.get(Urls.Github)}><img src={github} alt="Github" style={style.icon} /></a>
 		</div>
 		<div style={style.panel}>
 			<Link to="/"><p style={style.anchorColor}>{appName}</p></Link>
