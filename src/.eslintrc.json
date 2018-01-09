@@ -1,0 +1,15 @@
+{
+    "rules": {
+      "no-extra-parens": 0,
+      "react/jsx-uses-vars": 1
+    },
+    "env": {
+      "node": false,
+      "browser": true,
+      "es6": true
+    },
+    "parser": "babel-eslint",
+    "plugins": [
+        "eslint-plugin-react"
+    ]
+  }
